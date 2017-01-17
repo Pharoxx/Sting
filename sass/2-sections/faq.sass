@@ -1,0 +1,130 @@
+.section#faq
+
+	.wrapper
+		+clearfix
+
+	h2.section-title
+		color: $color-2
+	
+	.faqContainer
+		float: right
+		width: 50%
+		position: relative
+		text-align: center
+		+mobile
+			float: none
+			width: 100%
+
+		ul
+			display: inline-block
+			max-width: 100%
+			+mobile
+				display: block
+
+		li
+			list-style-type: none
+			font-size: 1rem
+			color: $color-2
+			padding: 0.4rem 1.75rem 0.4rem 0.5rem
+			margin: 0.25rem 0
+			position: relative
+			cursor: pointer
+			width: auto
+			max-width: 29rem
+			text-align: right
+			+tablet
+				max-width: 20.5rem
+			+mobile
+				max-width: 100%
+
+			&:before
+				width: 100%
+				content: ' '
+				display: block
+				position: absolute
+				background-image: url('img/question_mark.png')
+				background-size: contain
+				background-repeat: no-repeat
+				top: 0.35rem
+				right: 0
+				width: 1.15rem
+				height: 1.15rem
+				opacity: 0.6
+			&:nth-child(odd)
+				margin-left: 3rem
+			&:hover
+				color: $color-4
+
+	#blanket
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($color-2, 0.75)
+		z-index: 10
+		transition: background-color 500ms ease-out
+
+	#faq-perspective
+		z-index: 11
+		perspective: 50rem
+		position: fixed
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+
+	#faq-popup
+		position: fixed
+		top: 50%
+		left: 50%
+		transform-origin: 50% 50%
+		opacity: 1
+		width: 50rem
+		height: auto
+		max-height: 90%
+		background-color: $color-9
+		box-shadow: 0rem 0.5rem 3rem 0 rgba($color-1, 0.6)
+		padding: 2rem
+		transform: translate(-50%, -50%) rotateX(0) scale(1)
+		transition: opacity 350ms ease-out, transform 350ms ease-out
+		display: block
+		z-index: 12
+		+tablet
+			width: 40rem
+		+mobile
+			width: 90%
+
+		#close-btn
+			position: absolute
+			top: -0.75rem
+			left: -0.75rem
+			width: 1.5rem
+			height: 1.5rem
+			background: url('img/x.png') center/contain no-repeat
+			cursor: pointer
+
+		h3
+			font-size: 1.5rem
+			line-height: 1
+			margin-bottom: 1rem
+			color: $color-3
+
+		p
+			color: $color-2
+
+	// hidden states
+
+	#blanket.hidden
+		background-color: rgba($color-2, 0)
+		z-index: -1
+
+	#faq-perspective.hidden
+		z-index: -11
+
+	#faq-popup.hidden
+		transform: translate(-50%, -50%) rotateX(50deg) scale(0.1)
+		+tablet_and_mobile
+			transform: translate(-50%, -50%) rotateX(75deg) scale(0.1)
+		opacity: 0
+		z-index: -1

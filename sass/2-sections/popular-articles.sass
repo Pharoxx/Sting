@@ -1,0 +1,37 @@
+.section#popular-articles
+	
+	.boxes
+		+clearfix
+
+		.box
+			width: 22rem
+			margin-left: 2.5rem
+			background-color: $color-2
+			color: $color-9
+			float: right
+			padding: 1rem
+			&:last-child
+				margin-left: 0
+
+			h3
+				color: $color-4
+				font-size: 1.25rem
+
+			.article-date
+				font-size: 0.875rem
+				color: $color-8
+
+			.article-categories
+				margin: 0.5rem 0 1rem 0
+				span
+					display: inline-block
+					padding: 0.3rem 0.5rem
+					border-radius: 0.2rem
+					background-color: red
+					font-size: 0.875rem
+					background-color: lighten($color-2, 7%)
+					color: lighten($color-2, 25%)
+
+			.article-excerpt
+				height: 8rem
+				margin-bottom: 1.5rem

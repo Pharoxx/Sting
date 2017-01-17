@@ -1,0 +1,116 @@
+#footer
+	background-color: $color-2
+	color: $color-9
+	padding: 3rem 0
+	font-size: 0.875rem
+	+clearfix
+
+	.box
+		float: right
+		margin-left: 3rem
+		width: 18rem
+		+tablet
+			width: 11rem
+		+mobile
+			float: none
+			width: 100%
+			margin-bottom: 2rem
+			margin-left: 0
+			&:last-child
+				margin-bottom: 0
+		&:last-child
+			margin-left: 0
+			width: 29rem
+			+tablet
+				width: 16rem
+			+mobile
+				width: 100%
+
+	h3
+		font-size: 1.25rem
+		margin-bottom: 0.875rem
+		color: $color-4
+
+	ul
+		padding-right: 0.875rem
+		list-style-type: none
+		li a, ul li a:visited
+			padding: 0.15rem 0
+			text-decoration: none
+			color: lighten($color-2, 25%)
+			display: block
+			&:hover
+				color: lighten($color-2, 35%)
+
+	.fb-link, .phone-link, .mail-link
+		display: block
+		font-size: 1rem
+		color: $color-8
+		text-decoration: none
+		position: absolute
+		left: 0
+		&:hover
+			color: $color-9
+		+mobile
+			position: relative
+
+	.fb-link
+		bottom: 6rem
+		+mobile
+			bottom: 0
+		img
+			width: 3rem
+			height: 3rem
+			position: absolute
+			top: 0
+			left: 0rem
+			+mobile
+				left: auto
+				right: 0
+				
+		span
+			display: block
+			padding: 1rem 0 0 4rem
+			+mobile
+				padding: 1rem 4rem 0 0
+
+	.phone-link
+		bottom: 2rem
+		padding-left: 2rem
+		+mobile
+			bottom: 0
+			margin-top: 2.5rem
+			padding-left: 0
+			padding-right: 2rem
+		&:after
+			background: url(img/phone.png) center/contain no-repeat
+			content: ' '
+			position: absolute
+			width: 1.5rem
+			height: 1.5rem
+			top: -0.25rem
+			left: 0
+			opacity: 0.4
+			+mobile
+				left: auto
+				right: 0
+	.mail-link
+		bottom: 0
+		padding-left: 2rem
+		+mobile
+			bottom: 0
+			margin-top: 1rem
+			padding-left: 0
+			padding-right: 2rem
+		&:after
+			background: url(img/email.png) center/contain no-repeat
+			content: ' '
+			position: absolute
+			width: 1.5rem
+			height: 1.5rem
+			top: -0.25rem
+			left: 0
+			opacity: 0.4
+			+mobile
+				left: auto
+				right: 0

@@ -1,0 +1,96 @@
+#navigation
+	width: 100%
+	height: 4rem
+	position: relative
+	+mobile
+		transform: scale(0)
+		opacity: 0
+		position: absolute
+		top: 1rem
+		right: 4rem
+		width: 13rem
+		height: auto
+		z-index: 3
+		background-color: $color-3
+		padding: 0.5rem
+		box-shadow: 0 0.5rem 1rem 0 $color-1
+		transition: transform 300ms ease-out, opacity 400ms ease-out
+		transform-origin: 100% 2rem
+		&:after
+			content: ' '
+			position: absolute
+			display: block
+			width: 0
+			height: 0
+			top: 0.75rem
+			right: -.75rem
+			border-top: .75rem solid transparent
+			border-bottom: .75rem solid transparent
+			border-left: .75rem solid $color-3
+		&.is-visible
+			transform: scale(1)
+			opacity: 1
+
+	ul
+		position: relative
+		width: 100%
+		height: 100%
+		+clearfix
+
+	ul li
+		list-style-type: none
+		float: right
+		position: relative
+
+	ul li a, ul li a:visited
+		color: $color-2
+		display: block
+		padding: 1.25rem 0 1rem 0
+		margin-left: 1.5rem
+		font-family: $font-sec
+		text-decoration: none
+		font-size: 1rem
+		font-weight: bold
+		position: relative
+		+tablet
+			margin-left: 1.15rem
+			margin-top: 0.1rem
+			font-size: 1rem
+		+mobile
+			padding: 0.5rem 0
+			font-size: 1rem
+			color: $color-9
+
+	
+	ul li a:hover, ul li a:visited:hover
+		+desktop
+			color: $color-4
+
+	ul li a:after
+		content: ' '
+		display: block
+		position: absolute
+		bottom: 0.85rem
+		right: 0
+		width: 0
+		height: 2px
+		background-color: $color-4
+		transition: width 180ms ease-out
+
+	ul li a:hover:after, ul li a:visited:hover:after
+		+desktop
+			width: 100%
+	
+	ul li.active a
+		color: $color-4
+		&:after
+			width: 100%
+		
+
+/* Styles for dark navigation - inner pages */
+#navigation.dark
+	background-color: $color-2
+	+mobile
+		background-color: $color-3
+	ul li a, ul li a:visited
+		color: $color-9

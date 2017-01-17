@@ -1,0 +1,75 @@
+.mini-hero-image
+	background-color: $color-3
+	position: relative
+	height: 18rem
+	+mobile
+		height: auto
+
+	.wrapper
+		height: 100%
+		background-image: url('img/hero.jpg')
+		background-position: center left
+		background-size: contain
+		background-repeat: no-repeat
+		+mobile
+			background-size: cover
+			&:before
+				content: ' '
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba($color-2, 0.6)
+
+
+	.mid-box
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		+mobile
+			position: relative
+			padding: 5rem 0 2rem 0
+			transform: none
+			top: auto
+
+	h1
+		font: normal 4rem/110% $font-sec
+		color: $color-9
+		margin-bottom: 0.5rem
+		+mobile
+			font: normal 3rem/100% $font-sec
+	p
+		color: $color-9
+		margin-bottom: 2rem
+		+mobile
+			margin-top: 1.5rem
+
+	.phone-link, .mail-link
+		display: block
+		position: relative
+		height: 1rem
+		padding-right: 2rem
+		color: lighten($color-3, 20%)
+		cursor: pointer
+		text-decoration: none
+		+mobile
+			right: 1rem
+		&:before
+			content: ' '
+			position: absolute
+			width: 1.5rem
+			height: 1.5rem
+			top: -0.25rem
+			right: 0
+			opacity: 0.4
+
+	.phone-link
+		margin-bottom: 1rem
+		&:before
+			background: url('img/phone.png') center/contain no-repeat
+
+	.mail-link
+		&:before
+			background: url('img/email.png') center/contain no-repeat

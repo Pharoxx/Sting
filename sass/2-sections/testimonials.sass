@@ -1,0 +1,66 @@
+.section#testimonials
+
+	.wrapper
+		text-align: center
+
+	.four-boxes .box
+		background-color: transparent
+		padding: 0
+		height: auto
+		+tablet
+			&:nth-child(3), &:nth-child(4)
+				margin-bottom: 0rem
+		+mobile
+			margin-bottom: 6rem
+
+		&:after
+			height: 6rem
+			bottom: 1rem
+			+tablet
+				height: 4rem
+				bottom: 3rem
+			+mobile
+				height: 4rem
+				bottom: 3.25rem
+
+		img
+			width: 6rem
+			height: 6rem
+			border-radius: 100%
+
+	.four-boxes .box .box-content
+		margin-top: 1.5rem
+		border-radius: 0.25rem
+		text-align: right
+		padding: 1.5rem
+		background-color: darken($color-9, 5%)
+		position: relative
+		min-height: 208px
+
+		&:before
+			content: ' '
+			position: absolute
+			display: block
+			width: 0
+			height: 0
+			top: -0.75rem
+			right: 7.5rem
+			border-right: .75rem solid transparent
+			border-left: .75rem solid transparent
+			border-bottom: 0.75rem solid darken($color-9, 5%)
+			+tablet
+				right: 9.625rem
+			+mobile
+				right: 50%
+				transform: translateX(50%)
+
+		p
+			font-style: italic
+			color: $color-2
+			margin-bottom: 1rem
+		span
+			color: $color-7
+			font-size: 0.875rem	
+
+	.cta
+		margin: 2rem auto 0 auto 

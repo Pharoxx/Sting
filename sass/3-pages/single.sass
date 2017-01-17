@@ -1,0 +1,128 @@
+body.single
+
+	.article
+		margin: 3rem 0 3rem 3rem
+		width: 49rem
+		float: right
+		+tablet_and_mobile
+			width: 100%
+			float: none
+		+mobile
+			margin-top: 8.5rem
+
+
+		.article-title
+			font-size: 2.5rem
+			color: $color-3
+			padding-bottom: 0.25rem
+			line-height: 1
+			+mobile
+				margin-bottom: 0.5rem
+
+		.article-author
+			color: $color-4
+			display: inline-block
+			img
+				width: 2.5rem
+				height: 2.5rem
+				border-radius: 100%
+				margin-left: 0.25rem
+				float: right
+			span
+				display: inline-block
+				padding-top: 0.8125rem
+				+mobile
+					padding-top: 0.15rem
+					padding-right: 0.25rem
+			&:hover
+				span
+					text-decoration: underline
+
+		.article-date, i
+			color: $color-7
+			+mobile
+				display: block
+				padding-right: 3rem
+				transform: translateY(-1rem)
+
+		i
+			+mobile
+				display: none
+
+		.article-content
+			margin-top: 3rem
+
+			h2
+				font-size: 1.5rem
+				margin: 1rem 0 0.5rem 0
+			img
+				display: block
+				width: 100%
+				margin: 0.5rem 0
+			a
+				color: $color-4
+
+
+		h4
+			font-size: 1rem
+			margin-top: 2rem
+			font-family: $font-main
+			margin-bottom: 0.5rem
+		
+		.article-tags
+			padding: 0.6rem 0.5rem
+			span
+				display: inline-block
+				background-color: $color-3
+				padding: 0.5rem 0.75rem
+				text-decoration: none
+				color: $color-9
+				border-radius: 0.1875rem
+				opacity: 0.6
+				font-size: 0.875rem
+				margin-bottom: 0.25rem
+
+
+	.sidebar
+		width: 19rem
+		height: auto
+		background-color: $color-9
+		float: right
+		margin-top: 10.5rem
+		padding: 1.5rem
+		+clearfix
+		+tablet
+			float: none
+			width: 100%
+			padding-bottom: 0
+			padding-right: 2.5rem
+			margin: 2rem 0
+		+mobile
+			float: none
+			width: 100%
+			margin: 2rem 0
+
+
+		.section
+			padding: 0
+			font-size: 0.875rem
+			margin-bottom: 1.5rem
+			+tablet
+				float: right
+				width: 12rem
+				margin-left: 2rem
+				&:last-child
+					margin-left: 0
+
+		h3
+			font-size: 1rem
+			padding-bottom: 0.25rem
+			border-bottom: 1px solid $color-8
+			width: 80%
+			margin-bottom: 1rem
+			color: $color-2
+
+		a
+			display: block
+			color: $color-3
+			margin: 0.4rem 0

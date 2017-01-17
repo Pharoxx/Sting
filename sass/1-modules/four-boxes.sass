@@ -1,0 +1,78 @@
+.four-boxes
+	position: relative
+	margin-bottom: 6rem
+	+tablet
+		margin-bottom: 4rem
+	+mobile
+		margin-bottom: 2rem
+	+clearfix
+
+	.box
+		width: 260px
+		height: 208px
+		background-color: darken($color-9, 5%)
+		color: $color-9
+		float: right
+		margin-left: 2rem
+		padding: 1.25rem 1.5rem
+		position: relative
+		perspective: 800px
+		&:last-child
+			margin-left: 0
+		+tablet
+			width: 21rem
+			&:nth-child(1), &:nth-child(2)
+				margin-bottom: 6rem 
+			&:nth-child(2)
+				margin-left: 0
+			&:nth-child(3), &:nth-child(4)
+				margin-bottom: 2rem
+		+mobile
+			float: none
+			width: 100%
+			margin-bottom: 3rem
+			height: auto
+
+		h3
+			color: $color-1
+			font-size: 1.5rem
+			margin-bottom: 1rem
+			width: 85%
+			border-bottom: 1px solid rgba(0,0,0,0.2)
+
+		p
+			color: $color-2
+
+		a, a:visited
+			color: $color-4
+			font-weight: bold
+			display: block
+			padding: 4px 0
+			position: absolute
+			bottom: 1.25rem
+			right: 1.5rem
+			text-decoration: none
+			&:after
+				content: ' ← '
+				display: inline
+			&:hover
+				text-decoration: underline
+			+mobile
+				position: relative
+				bottom: 0
+				right: 0
+				margin-top: 0.5rem
+
+	.box:after
+		content: ' '
+		display: block
+		position: absolute
+		right: 30%
+		width: 40%
+		height: 50%
+		box-shadow: 0px 21.875rem 2.5rem 0 rgba($color-2, 0.15)
+		bottom: 0
+		transform: rotateX(85deg)
+		+mobile
+			bottom: 25%
+			height: 2rem

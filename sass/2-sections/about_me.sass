@@ -1,0 +1,47 @@
+.section#about_me
+	padding-bottom: 0
+	+clearfix
+	
+	.wrapper
+		padding-bottom: 3rem
+		background: url('img/clinic.jpg') center right/contain no-repeat
+
+	h2
+		margin-bottom: 2.5rem
+		color: $color-10
+
+	p
+		float: left
+		width: 38rem
+		color: darken($color-9, 5%)
+		+tablet
+			float: none
+			z-index: 2
+			position: relative
+			padding-right: 3rem
+			padding-left: 3rem
+			width: 100%
+		+mobile
+			float: none
+			z-index: 2
+			position: relative
+			padding-right: 0rem
+			padding-left: 0rem
+			width: 100%
+
+		b
+			font-size: 1.25rem
+			font-weight: bold
+			display: block
+			margin: 1.5rem 0 0.5rem 0
+			font-family: $font-sec
+			color: $color-10
+
+	.cta
+		clear: both
+		margin-left: 4rem
+		margin-top: 2rem
+		+tablet
+			float: left
+			margin-left: 0
+			margin-top: 3.5rem
